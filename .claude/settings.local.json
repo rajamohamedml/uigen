@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run *)",
+      "PowerShell(New-Item *)",
+      "PowerShell(icacls \"C:\\\\Users\\\\ClaudeCodeWS\\\\uigen\\\\.next\" /grant \"${env:USERNAME}:\\(OI\\)\\(CI\\)F\")"
+    ]
+  }
+}
