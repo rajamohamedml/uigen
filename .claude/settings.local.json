@@ -2,8 +2,19 @@
   "permissions": {
     "allow": [
       "Bash(npm run *)",
+      "mcp__playwright",
       "PowerShell(New-Item *)",
-      "PowerShell(icacls \"C:\\\\Users\\\\ClaudeCodeWS\\\\uigen\\\\.next\" /grant \"${env:USERNAME}:\\(OI\\)\\(CI\\)F\")"
+      "PowerShell(icacls \"C:\\\\Users\\\\ClaudeCodeWS\\\\uigen\\\\.next\" /grant \"${env:USERNAME}:\\(OI\\)\\(CI\\)F\")",
+      "PowerShell($proc = Start-Process -FilePath \"npx\" -ArgumentList \"@playwright/mcp@latest\" -NoNewWindow -PassThru -RedirectStandardError \"C:\\\\Temp\\\\pw-mcp-err.txt\"; Start-Sleep -Seconds 5; if \\(-not $proc.HasExited\\) { $proc.Kill\\(\\); \"Server started OK\" } else { \"Server exited with code: $\\($proc.ExitCode\\)\"; Get-Content \"C:\\\\Temp\\\\pw-mcp-err.txt\" -ErrorAction SilentlyContinue })",
+      "PowerShell(Start-Process \"http://localhost:3000/\")",
+      "PowerShell(Invoke-WebRequest -Uri \"http://localhost:3000\" -UseBasicParsing -TimeoutSec 3 2>&1 | Select-Object -First 1)",
+      "Bash(npm install *)",
+      "PowerShell(npm install *)",
+      "PowerShell(claude *)",
+      "PowerShell(winget install *)",
+      "PowerShell(git *)",
+      "PowerShell(Get-ChildItem *)",
+      "PowerShell(gh *)"
     ]
   }
 }
