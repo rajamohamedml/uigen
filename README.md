@@ -60,7 +60,7 @@ Open [http://localhost:3000](http://localhost:3000)
 - Component persistence for registered users
 - Export generated code
 
-## Tech Stack
+## Tech Stack of UIGEN app 
 
 - Next.js 15 with App Router
 - React 19
