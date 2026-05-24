@@ -1,4 +1,4 @@
-name: Claude Code
+﻿name: Claude Code
 
 on:
   issue_comment:
@@ -34,3 +34,20 @@ jobs:
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          custom_instructions: |
+            The project is a Next.js 15 app with SQLite via Prisma.
+            If needed, query the db with the sqlite3 CLI.
+          mcp_config: |
+            {
+              "mcpServers": {
+                "playwright": {
+                  "command": "npx",
+                  "args": [
+                    "@playwright/mcp@latest",
+                    "--allowed-origins",
+                    "localhost:3000;cdn.tailwindcss.com;esm.sh"
+                  ]
+                }
+              }
+            }
+          allowed_tools: "Bash(npm:*),Bash(sqlite3:*),mcp__playwright__browser_snapshot,mcp__playwright__browser_click"
