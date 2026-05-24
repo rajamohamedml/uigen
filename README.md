@@ -51,7 +51,7 @@ Open [http://localhost:3000](http://localhost:3000)
 4. Switch to Code view to see and edit the generated files
 5. Continue iterating with the AI to refine your components
 
-## Features
+## Features of UIGEN app
 
 - AI-powered component generation using Claude
 - Live preview with hot reload
@@ -60,7 +60,7 @@ Open [http://localhost:3000](http://localhost:3000)
 - Component persistence for registered users
 - Export generated code
 
-## Tech Stack of UIGEN app 
+## Tech Stack of UIGEN app
 
 - Next.js 15 with App Router
 - React 19
