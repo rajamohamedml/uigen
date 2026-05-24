@@ -2,6 +2,8 @@
 
 AI-powered React component generator with live preview.
 
+<!-- Claude Code GitHub integration enabled -->
+
 ## Prerequisites
 
 - Node.js 18+
